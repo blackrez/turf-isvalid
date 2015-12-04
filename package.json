@@ -1,0 +1,20 @@
+{
+  "name": "turf-valid",
+  "version": "1.0.0",
+  "description": "Find is a geometry is valid or not",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jsts": "^0.17.0"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0",
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "Nabil Servais",
+  "license": "ISC"
+}
