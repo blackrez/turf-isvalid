@@ -30,9 +30,9 @@ var poly = {
   }
 }
 
-> var isvald = turf.valid(poly);
-> console.log(isvald)
-true
+var isvald = turf.valid(poly);
+console.log(isvald)
+//=true
 ```
 
 

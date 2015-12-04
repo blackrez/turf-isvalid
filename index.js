@@ -20,9 +20,9 @@ var jsts = require('jsts');
  *   }
  * }
  *
- * > var isvald = turf.valid(poly);
- * > console.log(isvald)
- * true
+ * var isvald = turf.valid(poly);
+ * console.log(isvald)
+ * //=true
  */
 
 module.exports = function(geom) {
