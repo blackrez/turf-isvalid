@@ -1,0 +1,10 @@
+{
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [-77.031669, 38.878605]
+    ]
+  }
+}
