@@ -3,7 +3,7 @@ var jsts = require('jsts');
 
 /*@module turf/valid
  * @category Helper
- * @param {Feature<>} Feature, it can be point, string or polygon
+ * @param {Feature} Feature input to be tested if valid or not
  * @return {Boolean}
  *
  * @example
@@ -24,11 +24,11 @@ var jsts = require('jsts');
  * > console.log(isvald)
  * true
  */
- 
+
 module.exports = function(geom) {
 
   var reader = new jsts.io.GeoJSONReader();
   var g = reader.read(JSON.stringify(geom));
-
   return g.geometry.isValid()
+
 };
