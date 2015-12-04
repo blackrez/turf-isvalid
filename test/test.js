@@ -1,49 +1,41 @@
-var valid = require('../'),
+var isvalid = require('../'),
   test = require('tape'),
   fs = require('fs');
 
 var REGEN = true;
 
 test('valid -- feature polygon geojson', function(t){
-  var polygon = JSON.parse(fs.readFileSync('tests/fixtures/polygon-valid.json'));
-  var isValid = valid(polygon);
-  console.log(isValid);
-  t.ok(isValid);
+  var polygon = JSON.parse(fs.readFileSync(__dirname + '/fixtures/valid/polygon.json'));
+  t.ok(isvalid(polygon));
   t.end();
 });
 
 test('valid -- feature linestring geojson', function(t){
-  var linestring = JSON.parse(fs.readFileSync('tests/fixtures/linestring-valid.json'));
-  var isValid = valid(linestring);
-  t.ok(isValid);
+  var linestring = JSON.parse(fs.readFileSync(__dirname + '/fixtures/valid/linestring.json'));
+  t.ok(isvalid(linestring));
   t.end();
 });
 
 test('valid -- feature point geojson', function(t){
-  var point = JSON.parse(fs.readFileSync('tests/fixtures/point-valid.json'));
-  var isValid = valid(point);
-  t.ok(isValid);
+  var point = JSON.parse(fs.readFileSync(__dirname + '/fixtures/valid/point.json'));
+  t.ok(isvalid(point));
   t.end();
 });
 
 test('invalid -- feature polygon geojson', function(t){
-  var polygon = JSON.parse(fs.readFileSync('tests/fixtures/polygon-invalid.json'));
-  var isValid = valid(polygon);
-  console.log(isValid);
-  t.notOk(isValid);
+  var polygon = JSON.parse(fs.readFileSync(__dirname + '/fixtures/invalid/polygon.json'));
+  t.notOk(isvalid(polygon));
   t.end();
 });
 
 test('invalid -- feature linestring geojson', function(t){
-  var linestring = JSON.parse(fs.readFileSync('tests/fixtures/linestring-invalid.json'));
-  var isValid = valid(linestring);
-  t.notOk(isValid);
+  var linestring = JSON.parse(fs.readFileSync(__dirname + '/fixtures/invalid/linestring.json'));
+  t.notOk(isvalid(linestring));
   t.end();
 });
 
 test('invalid -- feature point geojson', function(t){
-  var point = JSON.parse(fs.readFileSync('tests/fixtures/point-invalid.json'));
-  var isValid = valid(point);
-  t.notOk(isValid);
+  var point = JSON.parse(fs.readFileSync(__dirname + '/fixtures/invalid/point.json'));
+  t.notOk(isvalid(point));
   t.end();
 });
