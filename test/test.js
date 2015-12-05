@@ -28,6 +28,18 @@ test('invalid -- feature polygon geojson', function(t){
   t.end();
 });
 
+test('invalid -- feature polygon geojson holes', function(t){
+  var polygon = JSON.parse(fs.readFileSync(__dirname + '/fixtures/invalid/polygon-holes.json'));
+  t.notOk(isvalid(polygon));
+  t.end();
+});
+
+test('invalid -- feature polygon geojson intersects rings', function(t){
+  var polygon = JSON.parse(fs.readFileSync(__dirname + '/fixtures/invalid/polygon-intersectingring.json'));
+  t.notOk(isvalid(polygon));
+  t.end();
+});
+
 test('invalid -- feature linestring geojson', function(t){
   var linestring = JSON.parse(fs.readFileSync(__dirname + '/fixtures/invalid/linestring.json'));
   t.notOk(isvalid(linestring));
