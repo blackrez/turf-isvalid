@@ -1,5 +1,7 @@
 # turf-isvalid
 
+[![build status](https://secure.travis-ci.org/blackrez/turf-isvalid.png)](http://travis-ci.org/blackrez/turf-isvalid)
+
 Find is a geometry is valid or not
 
 
