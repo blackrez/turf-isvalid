@@ -1,7 +1,7 @@
 {
   "name": "turf-isvalid",
   "version": "1.0.0",
-  "description": "Find is a geometry is valid or not",
+  "description": "Test if a geometry is valid or not",
   "main": "index.js",
   "directories": {
     "test": "tests",
