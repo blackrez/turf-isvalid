@@ -22,7 +22,7 @@ var jsts = require('jsts');
  *
  * var isvald = turf.valid(poly);
  * console.log(isvald)
- * //=true
+ * //=false
  */
 
 module.exports = function(geom) {
