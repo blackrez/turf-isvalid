@@ -28,7 +28,7 @@ var jsts = require('jsts');
 module.exports = function(geom) {
 
   var reader = new jsts.io.GeoJSONReader();
-  var g = reader.read(JSON.stringify(geom));
-  return g.geometry.isValid()
+  var g = reader.read(geom.geometry);
+  return g.isValid()
 
 };
