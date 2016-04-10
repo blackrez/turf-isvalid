@@ -8,7 +8,7 @@
     "doc": "dox -r < index.js | doxme --readme > README.md"
   },
   "dependencies": {
-    "jsts": "^1.0.3"
+    "jsts": "^1.1.0"
   },
   "devDependencies": {
     "tape": "^3.5.0",

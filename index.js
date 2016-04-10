@@ -27,8 +27,14 @@ var jsts = require('jsts');
 
 module.exports = function(geom) {
 
+  if (geom.type == "Feature"){
+      geometry = geom.geometry
+  }
+  else {
+    geometry = geom
+  }
   var reader = new jsts.io.GeoJSONReader();
-  var g = reader.read(geom.geometry);
+  var g = reader.read(geometry);
   return g.isValid()
 
 };
